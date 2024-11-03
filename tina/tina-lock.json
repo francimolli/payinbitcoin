@@ -1,6 +1,6 @@
 {
 	"schema": {
-		"version": { "fullVersion": "1.5.7", "major": "1", "minor": "5", "patch": "7" },
+		"version": { "fullVersion": "1.4.27", "major": "1", "minor": "4", "patch": "27" },
 		"meta": { "flags": ["experimentalData"] },
 		"collections": [
 			{
@@ -16,8 +16,7 @@
 						"name": "heroImage",
 						"description": "The image used for the cover of the post",
 						"namespace": ["post", "heroImage"],
-						"searchable": false,
-						"uid": false
+						"searchable": false
 					},
 					{
 						"type": "string",
@@ -27,8 +26,7 @@
 						"description": "Select an category for this post",
 						"options": ["Iniziare", "Programmare"],
 						"namespace": ["post", "category"],
-						"searchable": true,
-						"uid": false
+						"searchable": true
 					},
 					{
 						"type": "string",
@@ -37,8 +35,7 @@
 						"name": "description",
 						"description": "A short description of the post",
 						"namespace": ["post", "description"],
-						"searchable": true,
-						"uid": false
+						"searchable": true
 					},
 					{
 						"type": "datetime",
@@ -46,8 +43,7 @@
 						"label": "Publication Date",
 						"required": true,
 						"namespace": ["post", "pubDate"],
-						"searchable": true,
-						"uid": false
+						"searchable": true
 					},
 					{
 						"name": "draft",
@@ -55,8 +51,7 @@
 						"type": "boolean",
 						"description": "If this is checked the post will not be published",
 						"namespace": ["post", "draft"],
-						"searchable": true,
-						"uid": false
+						"searchable": true
 					},
 					{
 						"type": "string",
@@ -67,8 +62,7 @@
 						"list": true,
 						"ui": { "component": "tags" },
 						"namespace": ["post", "tags"],
-						"searchable": true,
-						"uid": false
+						"searchable": true
 					},
 					{
 						"type": "string",
@@ -77,8 +71,7 @@
 						"isTitle": true,
 						"required": true,
 						"namespace": ["post", "title"],
-						"searchable": true,
-						"uid": false
+						"searchable": true
 					},
 					{
 						"type": "rich-text",
@@ -97,8 +90,7 @@
 										"isBody": true,
 										"namespace": ["post", "SButton", "SButton", "children"],
 										"searchable": true,
-										"parser": { "type": "mdx" },
-										"uid": false
+										"parser": { "type": "mdx" }
 									}
 								],
 								"namespace": ["post", "SButton", "SButton"]
@@ -106,8 +98,7 @@
 						],
 						"namespace": ["post", "SButton"],
 						"searchable": true,
-						"parser": { "type": "mdx" },
-						"uid": false
+						"parser": { "type": "mdx" }
 					}
 				],
 				"namespace": ["post"]
@@ -1248,29 +1239,6 @@
 										"kind": "NamedType",
 										"name": { "kind": "Name", "value": "DocumentMutation" }
 									}
-								}
-							}
-						],
-						"type": {
-							"kind": "NonNullType",
-							"type": { "kind": "NamedType", "name": { "kind": "Name", "value": "DocumentNode" } }
-						}
-					},
-					{
-						"kind": "FieldDefinition",
-						"name": { "kind": "Name", "value": "createFolder" },
-						"arguments": [
-							{
-								"kind": "InputValueDefinition",
-								"name": { "kind": "Name", "value": "collection" },
-								"type": { "kind": "NamedType", "name": { "kind": "Name", "value": "String" } }
-							},
-							{
-								"kind": "InputValueDefinition",
-								"name": { "kind": "Name", "value": "relativePath" },
-								"type": {
-									"kind": "NonNullType",
-									"type": { "kind": "NamedType", "name": { "kind": "Name", "value": "String" } }
 								}
 							}
 						],
