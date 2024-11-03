@@ -3,8 +3,6 @@ import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import { remarkReadingTime } from './src/utils/readTime.ts'
-import vercel from '@astrojs/vercel/serverless';
-
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://payinbitcoin.org/', // Write here your website url
@@ -30,9 +28,5 @@ export default defineConfig({
 		}),
 		sitemap(),
 		tailwind()
-	],
-	output: 'server',
-	adapter: vercel({
-	  webAnalytics: { enabled: true }
-	})
+	]
 })
