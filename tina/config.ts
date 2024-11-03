@@ -108,7 +108,7 @@ export default defineConfig({
 	search: {
 		tina: {
 			indexerToken: process.env.TINA_SEARCH_TOKEN,
-			stopwordLanguages: ['it']
+			stopwordLanguages: ['ita']
 		},
 		indexBatchSize: 100,
 		maxSearchIndexFieldLength: 100
