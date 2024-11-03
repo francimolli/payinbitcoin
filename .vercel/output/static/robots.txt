@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://payinbitcoin.org/sitemap-index.xml
