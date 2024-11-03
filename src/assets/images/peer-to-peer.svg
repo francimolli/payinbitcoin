@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+    <!-- Sfondo -->
+    <rect width="800" height="600" fill="#f0f0f0"/>
+    
+    <!-- Definizione del pattern per le linee tratteggiate animate -->
+    <defs>
+        <pattern id="moving-dots" width="20" height="4" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="2" fill="#666">
+                <animate attributeName="cx" values="0;20" dur="2s" repeatCount="indefinite"/>
+            </circle>
+        </pattern>
+    </defs>
+    
+    <!-- Nodi distribuiti in modo circolare -->
+    <!-- Tutti i nodi hanno le stesse dimensioni e lo stesso colore per enfatizzare l'uguaglianza -->
+    <circle cx="400" cy="150" r="25" fill="#ff9900" stroke="#16A34A" stroke-width="3"/>
+    <circle cx="600" cy="250" r="25" fill="#ff9900" stroke="#16A34A" stroke-width="3"/>
+    <circle cx="550" cy="450" r="25" fill="#ff9900" stroke="#16A34A" stroke-width="3"/>
+    <circle cx="250" cy="450" r="25" fill="#ff9900" stroke="#16A34A" stroke-width="3"/>
+    <circle cx="200" cy="250" r="25" fill="#ff9900" stroke="#16A34A" stroke-width="3"/>
+    <circle cx="400" cy="350" r="25" fill="#ff9900" stroke="#16A34A" stroke-width="3"/>
+    
+    <!-- Connessioni tra tutti i nodi per formare una mesh completa -->
+    <g stroke="#666" stroke-width="2">
+        <!-- Connessioni orizzontali -->
+        <line x1="200" y1="250" x2="600" y2="250">
+            <animate attributeName="stroke-dasharray" values="5,5;10,10;5,5" dur="3s" repeatCount="indefinite"/>
+        </line>
+        <line x1="250" y1="450" x2="550" y2="450">
+            <animate attributeName="stroke-dasharray" values="5,5;10,10;5,5" dur="3.5s" repeatCount="indefinite"/>
+        </line>
+        
+        <!-- Connessioni diagonali -->
+        <line x1="200" y1="250" x2="400" y2="150">
+            <animate attributeName="stroke-dasharray" values="5,5;10,10;5,5" dur="2.8s" repeatCount="indefinite"/>
+        </line>
+        <line x1="400" y1="150" x2="600" y2="250">
+            <animate attributeName="stroke-dasharray" values="5,5;10,10;5,5" dur="3.2s" repeatCount="indefinite"/>
+        </line>
+        <line x1="200" y1="250" x2="250" y2="450">
+            <animate attributeName="stroke-dasharray" values="5,5;10,10;5,5" dur="4s" repeatCount="indefinite"/>
+        </line>
+        <line x1="600" y1="250" x2="550" y2="450">
+            <animate attributeName="stroke-dasharray" values="5,5;10,10;5,5" dur="3.7s" repeatCount="indefinite"/>
+        </line>
+        
+        <!-- Connessioni al nodo centrale per completare la mesh -->
+        <line x1="400" y1="350" x2="200" y2="250">
+            <animate attributeName="stroke-dasharray" values="5,5;10,10;5,5" dur="3.3s" repeatCount="indefinite"/>
+        </line>
+        <line x1="400" y1="350" x2="600" y2="250">
+            <animate attributeName="stroke-dasharray" values="5,5;10,10;5,5" dur="2.5s" repeatCount="indefinite"/>
+        </line>
+        <line x1="400" y1="350" x2="250" y2="450">
+            <animate attributeName="stroke-dasharray" values="5,5;10,10;5,5" dur="4.2s" repeatCount="indefinite"/>
+        </line>
+        <line x1="400" y1="350" x2="550" y2="450">
+            <animate attributeName="stroke-dasharray" values="5,5;10,10;5,5" dur="3.8s" repeatCount="indefinite"/>
+        </line>
+        <line x1="400" y1="350" x2="400" y2="150">
+            <animate attributeName="stroke-dasharray" values="5,5;10,10;5,5" dur="3.1s" repeatCount="indefinite"/>
+        </line>
+    </g>
+    
+    <!-- Pacchetti dati che si muovono tra i nodi -->
+    <circle r="4" fill="#000000">
+        <animateMotion path="M200,250 L600,250" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="4" fill="#000000">
+        <animateMotion path="M250,450 L550,450" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="4" fill="#000000">
+        <animateMotion path="M400,150 L400,350" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Etichette dei nodi tutte uguali -->
+    <text x="400" y="140" text-anchor="middle" fill="#333" font-size="12">Peer</text>
+    <text x="600" y="240" text-anchor="middle" fill="#333" font-size="12">Peer</text>
+    <text x="550" y="440" text-anchor="middle" fill="#333" font-size="12">Peer</text>
+    <text x="250" y="440" text-anchor="middle" fill="#333" font-size="12">Peer</text>
+    <text x="200" y="240" text-anchor="middle" fill="#333" font-size="12">Peer</text>
+    <text x="400" y="340" text-anchor="middle" fill="#333" font-size="12">Peer</text>
+</svg>
