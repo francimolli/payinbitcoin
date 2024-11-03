@@ -3,8 +3,13 @@ dist/
 # generated types
 .astro/
 
+.vercel/
+
 # dependencies
 node_modules/
+
+
+tina-lock.json
 
 # logs
 npm-debug.log*
