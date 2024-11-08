@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+    <!-- Background -->
+    <rect width="800" height="800" fill="#f8f9fa"/>
+    
+    <!-- Central Bitcoin Logo -->
+    <circle cx="400" cy="400" r="80" fill="#f7931a"/>
+    <text x="400" y="420" text-anchor="middle" fill="white" font-size="24" font-weight="bold">₿</text>
+    
+    <!-- Outer Circle -->
+    <circle cx="400" cy="400" r="300" fill="none" stroke="#2d3748" stroke-width="2" stroke-dasharray="10,10"/>
+    
+    <!-- Circular Flow Arrows -->
+    <path d="M 400 100 A 300 300 0 1 1 100 400" fill="none" stroke="#4a5568" stroke-width="4" marker-end="url(#arrowhead)"/>
+    
+    <!-- Arrow Marker -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#4a5568"/>
+        </marker>
+    </defs>
+    
+    <!-- Nodes -->
+    <g>
+        <!-- Miners -->
+        <circle cx="400" cy="100" r="50" fill="#63b3ed"/>
+        <text x="400" y="105" text-anchor="middle" fill="white" font-size="14">Miners</text>
+        
+        <!-- Merchants -->
+        <circle cx="700" cy="400" r="50" fill="#68d391"/>
+        <text x="700" y="405" text-anchor="middle" fill="white" font-size="14">Merchants</text>
+        
+        <!-- Users -->
+        <circle cx="400" cy="700" r="50" fill="#fc8181"/>
+        <text x="400" y="705" text-anchor="middle" fill="white" font-size="14">Users</text>
+        
+        <!-- Exchanges -->
+        <circle cx="100" cy="400" r="50" fill="#b794f4"/>
+        <text x="100" y="405" text-anchor="middle" fill="white" font-size="14">Exchanges</text>
+    </g>
+    
+    <!-- Connection Lines -->
+    <g stroke="#718096" stroke-width="2" stroke-dasharray="5,5">
+        <line x1="435" y1="135" x2="665" y2="365"/>
+        <line x1="665" y1="435" x2="435" y2="665"/>
+        <line x1="365" y1="665" x2="135" y2="435"/>
+        <line x1="135" y1="365" x2="365" y2="135"/>
+    </g>
+    
+    <!-- Labels -->
+    <g font-size="12" fill="#4a5568">
+        <!-- Mining Related -->
+        <text x="400" y="40" text-anchor="middle">Block Rewards</text>
+        <text x="400" y="60" text-anchor="middle">& Transaction Fees</text>
+        
+        <!-- Merchant Related -->
+        <text x="760" y="390" text-anchor="middle">Goods &amp;</text>
+        <text x="760" y="410" text-anchor="middle">Services</text>
+        
+        <!-- User Related -->
+        <text x="400" y="760" text-anchor="middle">Payments &amp;</text>
+        <text x="400" y="780" text-anchor="middle">Transactions</text>
+        
+        <!-- Exchange Related -->
+        <text x="40" y="390" text-anchor="middle">Trading &amp;</text>
+        <text x="40" y="410" text-anchor="middle">Liquidity</text>
+    </g>
+</svg>
